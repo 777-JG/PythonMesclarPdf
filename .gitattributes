@@ -1,0 +1,12 @@
+from pathlib import Path
+
+caminho_projeto = Path('.')  
+
+arquivo = caminho_projeto / '.gitattributes'
+
+conteudo = '*.py linguist-language=Python\n'
+
+with open(arquivo, 'w', encoding='utf-8') as f:
+    f.write(conteudo)
+
+print(f'Arquivo .gitattributes criado em: {arquivo.resolve()}')
